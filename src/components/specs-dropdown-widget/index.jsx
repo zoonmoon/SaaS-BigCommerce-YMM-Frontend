@@ -33,14 +33,14 @@ export function SpecsDropdownWidget({ endpoint, storeHash, callbackToSubmission,
     }
 
     function returnQueryParamsString(specToFetch){
-
+        
         const queryParams = []
         
         queryParams.push(`store_hash=${storeHash}`)
         queryParams.push(`selected_specs_info=${returnSelectedInfo(specToFetch)}`)
         queryParams.push(`spec_to_fetch=${specToFetch}`) // based on 
         queryParams.push(`is_listing_page=${listingPage}`) // based on 
-
+        
         return queryParams.join('&')
         
     }
@@ -93,7 +93,7 @@ export function SpecsDropdownWidget({ endpoint, storeHash, callbackToSubmission,
                         const [specKey, specValue] = spec.split(':')
                         initialSpecKeyVsValue[specKey]  = specValue
                     })
-                    
+
                 }
 
                 specs.forEach(spec => {

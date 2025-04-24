@@ -19,7 +19,7 @@ function SpecsDropdownWidgetInline(){
   const { push } = useRouter();  // Get the push method for navigation
 
   const callBack = (selectedSpecs) => {
-    window.location.href = '/compatible-parts?fits='+selectedSpecs;  //
+    window.location.href = '/search.php?search_query="'+selectedSpecs+'"';  //
   };
 
   console.log("ENV URL from componenet:", process.env.REACT_APP_API_URL);
@@ -37,7 +37,6 @@ function SpecsDropdownWidgetInline(){
 const App = () => {
 
   console.log("ENV URL:", process.env.REACT_APP_API_URL);
-
 
   return (
     <div>
