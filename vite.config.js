@@ -4,7 +4,14 @@ import dotenv from 'dotenv';
 
 dotenv.config(); // So Vite can read .env values
 
+
+
 export default defineConfig({
+  define: {
+        'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+        'process.env.REACT_APP_STORE_HASH': JSON.stringify(process.env.REACT_APP_STORE_HASH),
+        'process.env.REACT_APP_API_URL': JSON.stringify(process.env.REACT_APP_API_URL)
+  },
   plugins: [react({ jsxRuntime: 'automatic' })],
   build: {
     lib: {
